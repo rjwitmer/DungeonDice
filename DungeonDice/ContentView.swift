@@ -34,18 +34,11 @@ struct ContentView: View {
         GeometryReader { geo in
             VStack {
                 
-                Text("Dungeon Dice")
-                    .font(.largeTitle)
-                    .fontWeight(.black)
-                    .foregroundColor(.red)
+                titleView
                 
                 Spacer()
                 
-                Text(rollMessage)
-                    .font(.largeTitle)
-                    .fontWeight(.medium)
-                    .multilineTextAlignment(.center)
-                    .frame(height: 150)
+                resultMessageView
                 
                 Spacer()
                 
@@ -75,16 +68,16 @@ struct ContentView: View {
             }
             .padding()
             .onChange(of: geo.size.width, perform: { newValue in
-                arrangeGridItems(geo: geo)
+                arrangeGridItems(deviceWidth: geo.size.width)
             })
             .onAppear {
-                arrangeGridItems(geo: geo)
+                arrangeGridItems(deviceWidth: geo.size.width)
             }
         }
 
     }
-    func arrangeGridItems(geo: GeometryProxy) {
-        var screenWidth = geo.size.width - (horizontalPadding * 2)  // padding on both sides
+    func arrangeGridItems(deviceWidth: CGFloat) {
+        var screenWidth = deviceWidth - (horizontalPadding * 2)  // padding on both sides
         if Dice.allCases.count > 1 {
             screenWidth += spacing
         }
@@ -95,6 +88,23 @@ struct ContentView: View {
 
     }
 }
+
+extension ContentView {
+    private var titleView: some View {
+        Text("Dungeon Dice")
+            .font(.largeTitle)
+            .fontWeight(.black)
+            .foregroundColor(.red)
+    }
+    private var resultMessageView: some View {
+        Text(rollMessage)
+            .font(.largeTitle)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .frame(height: 150)
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
