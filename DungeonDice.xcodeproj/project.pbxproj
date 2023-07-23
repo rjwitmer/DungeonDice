@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CCAD8BB42A6CC397005634E2 /* ButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAD8BB32A6CC397005634E2 /* ButtonLayout.swift */; };
 		CCDDDC232A687278002CC15A /* DungeonDiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDDDC222A687278002CC15A /* DungeonDiceApp.swift */; };
 		CCDDDC252A687278002CC15A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDDDC242A687278002CC15A /* ContentView.swift */; };
 		CCDDDC272A68727B002CC15A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCDDDC262A68727B002CC15A /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CCAD8BB32A6CC397005634E2 /* ButtonLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLayout.swift; sourceTree = "<group>"; };
 		CCDDDC1F2A687278002CC15A /* DungeonDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDDDC222A687278002CC15A /* DungeonDiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonDiceApp.swift; sourceTree = "<group>"; };
 		CCDDDC242A687278002CC15A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				CCDDDC302A687CCB002CC15A /* Info.plist */,
 				CCDDDC222A687278002CC15A /* DungeonDiceApp.swift */,
 				CCDDDC242A687278002CC15A /* ContentView.swift */,
+				CCAD8BB32A6CC397005634E2 /* ButtonLayout.swift */,
 				CCDDDC262A68727B002CC15A /* Assets.xcassets */,
 				CCDDDC282A68727B002CC15A /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCAD8BB42A6CC397005634E2 /* ButtonLayout.swift in Sources */,
 				CCDDDC252A687278002CC15A /* ContentView.swift in Sources */,
 				CCDDDC232A687278002CC15A /* DungeonDiceApp.swift in Sources */,
 			);
